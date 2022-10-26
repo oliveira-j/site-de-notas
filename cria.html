@@ -1,0 +1,85 @@
+CRIAR
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade</title>
+    <link rel="stylesheet" href="style.css">
+   
+</head>
+<body>
+
+<div class="menu2">
+
+ 
+<h4>Criar tarefas</h4>
+<li2><a href="index.html">Pagina inicial</a></li2>
+
+<br>
+
+</div>
+
+ <div class="bt1">
+<input id="texto" placeholder="Escreva a tarefa:">
+
+<button onclick="adicionar();" id="botao">Nova tarefa</button>
+<br><br>
+
+</div>
+
+
+
+<script>
+function adicionar()
+{
+ const conteudo = document.getElementById
+  ('texto').value;
+
+ const novaH3 = document.createElement('h3');
+
+ novaH3.innerHTML = conteudo;
+
+ const bt = document.createElement('button');;
+
+const nova = document.createElement('div')
+
+ bt.innerHTML = "deletar";
+
+ nova.className="nv";
+
+ novaH3.addEventListener('click', function()
+  {novaH3.style.textDecoration = "line-through";
+ novaH3.style.color= "black";
+ });
+ 
+ bt.addEventListener('click', function(){
+novaH3.remove(); 
+bt.remove();})
+
+bt.addEventListener('click', function(){
+ nv.remove();})
+
+
+ document.body.appendChild(novaH3)
+
+ document.body.appendChild(bt)
+
+ document.getElementById('texto').value ="";
+
+ 
+ 
+ document.getElementById('texto').value=""
+  
+
+
+}
+
+</script>
+
+
+
+
+</body>
+</html>
