@@ -130,7 +130,7 @@ padding: 10px;
     </div>
     
     <div class="botao">
- <button class="button" onclick="entrar()"> ENTRAR</button>
+ <button class="button" onclick="inicial ()"> ENTRAR</button>
     </div>
 
     <script>
@@ -155,17 +155,7 @@ padding: 10px;
             e.preventDefault()
         });
 
-        function entrar() {
-    if(nome.value, login.value, email.value, senha.value, confsenha.value == ""){
-
-    }
-    else if (nome.value.length < 10, login.value.length > 10, !emailRegex.test(email.value), senha.value != confsenha.value){
-
-    }
-    else{
-        window.location.href = "index.html"
-    }
-};
+      
 
 function validarNome() {
     if (nome.value == ""){
@@ -236,7 +226,17 @@ function compararSenha() {
     }
 };
 
+function inicial() {
+    if(nome.value, login.value, email.value, senha.value, confsenha.value == ""){
 
+    }
+    else if (nome.value.length < 10, login.value.length > 10, !emailRegex.test(email.value), senha.value != confsenha.value){
+
+    }
+    else{
+        window.location.href = "index.html"
+    }
+};
 
     </script>
 </body>
