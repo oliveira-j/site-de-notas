@@ -134,12 +134,7 @@ padding: 10px;
     </div>
 
     <script>
-        document.addEventListener("keypress", function(e){
-    if(e.key === "Enter"){
-        const button = document.querySelector("button");
-        button.click();
-         }
-      });
+        
 
 
        
@@ -151,23 +146,21 @@ padding: 10px;
         const confsenha = document.getElementById('confsenha');
     
   
-        geral.addEventListener('submit', (e) =>{  
-            e.preventDefault()
-        });
+       
 
       
 
 function validarNome() {
     if (nome.value == ""){
-        span[0].style.display = "none";
+     
     }
     else if (nome.value.length < 10){
         nome.style.border="3px solid #A72608";
-        span[0].style.display = "block";
+       
     }
     else{
         nome.style.border="3px solid #004E98";
-        span[0].style.display = "none";
+       
         var nomeSave = document.querySelector("#nome").value;
         localStorage.setItem('nome', nomeSave);
     }
@@ -175,15 +168,15 @@ function validarNome() {
 
 function validarLogin() {
     if (login.value == ""){
-        span[1].style.display = "none";
+        
     }
     else if (login.value.length > 10){
         login.style.border = "3px solid #A72608";
-        span[1].style.display = "block";
+       
     }
     else{
         login.style.border = "3px solid #004e98";
-        span[1].style.display = "none";
+        
         var loginSave = document.querySelector("#login").value
         localStorage.setItem('login', loginSave)
     }
@@ -191,15 +184,15 @@ function validarLogin() {
 
 function validarEmail() {
     if (email.value == "") {
-        span[2].style.display = "none";
+        
     }
     else if (!emailRegex.test(email.value)){
         email.style.border = "3px solid #A72608"
-        span[2].style.display = "block";
+        
     }
     else {
         email.style.border = "3px solid #004e98"
-        sapn[2].style.display = "none";
+      
         var emailSave = document.querySelector("#email").value;
         localStorage.setItem('email', emailSave);
     }
@@ -207,22 +200,19 @@ function validarEmail() {
 
 function compararSenha() {
     if (senha.value == "" && confsenha.value == "") {
-        span[3].style.border.display = "none";
-        span[4].style.border.display = "none";
+        
     }
     else if (senha.value == confsenha.value) {
         senha.style.border = "3px solid #004e98";
         confsenha.style.border = "3px solid #004e98";
-        span[3].style.display = "none";
-        span[4].style.display = "none";
+        
         var senhaSave = document.querySelector("#senha").value;
         localStorage.setItem('senha', senhaSave)
     }
     else {
         senha.style.border = "3px solid #A72608";
         confsenha.style.border = "3px solid #A72608";
-        span[3].style.display = "block";
-        span[4].style.display = "block";
+        
     }
 };
 
